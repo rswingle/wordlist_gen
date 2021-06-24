@@ -13,8 +13,8 @@ f = open("wordlist.txt", "a")
 
 for x in range(6,24):
 	for xs in itertools.product(chrs, repeat=x):
-		#line = xs.join('\n')
 		f.writelines(xs)
 		f.write("\n")
+		print(xs)
 
 f.close()
