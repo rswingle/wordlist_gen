@@ -23,27 +23,34 @@ def compute_SHA512_hash(string, encoding='utf-8'):
 	sha512_hasher.update(string.encode(encoding))
 	return sha512_hasher.hexdigest()
 
-hashes = open("hashes.txt", "a")
+md5 = open("md5.txt", "a")
+sha1 =  open("sha1.txt", "a")
+sha256 = open("sha256.txt", "a")
+sha512 =  open("sha512.txt", "a")
+
 
 with open("wordlist.txt") as f:
     for line in f:
         print(compute_MD5_hash(line))
-        hashes.write(line)
+        md5.write(line)
 
 with open("wordlist.txt") as f:
     for line in f:
         print(compute_SHA1_hash(line))
-        hashes.write(line)
+        sha1.write(line)
 
 with open("wordlist.txt") as f:
     for line in f:
         print(compute_SHA256_hash(line))
-        hashes.write(line)
+        sha256.write(line)
 
 with open("wordlist.txt") as f:
     for line in f:
         print(compute_SHA512_hash(line))
-        hashes.write(line)
+        sha512.write(line)
 
 
-hashes.close()
+md5.close()
+sha1.close()
+sha256.close()
+sha512.close()
