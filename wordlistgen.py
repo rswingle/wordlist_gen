@@ -9,7 +9,7 @@ import itertools
 
 chrs = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_=+{[}]\\|;:,<.>/?`~!@#$%^&*()'
 
-f = open("wordlist.txt", "a")
+f = open("/data/wordlist.txt", "a")
 
 for x in range(6,24):
 	for xs in itertools.product(chrs, repeat=x):
