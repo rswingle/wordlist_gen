@@ -29,22 +29,22 @@ sha256 = open("/library/sha256.txt", "a")
 sha512 =  open("/library/sha512.txt", "a")
 
 
-with open("/data/wordlist.txt") as f:
+with open("/library/wordlist.txt") as f:
     for line in f:
         print(compute_MD5_hash(line))
         md5.write(line)
 
-with open("/data/wordlist.txt") as f:
+with open("/library/wordlist.txt") as f:
     for line in f:
         print(compute_SHA1_hash(line))
         sha1.write(line)
 
-with open("/data/wordlist.txt") as f:
+with open("/library/wordlist.txt") as f:
     for line in f:
         print(compute_SHA256_hash(line))
         sha256.write(line)
 
-with open("/data/wordlist.txt") as f:
+with open("/library/wordlist.txt") as f:
     for line in f:
         print(compute_SHA512_hash(line))
         sha512.write(line)
